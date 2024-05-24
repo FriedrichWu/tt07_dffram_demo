@@ -24,6 +24,8 @@ set ::env(EXTRA_SPEFS) "\
     $::env(DESIGN_DIR)/../macros/spef/max_/RAM8.max.spef \
 	$::env(DESIGN_DIR)/../macros/spef/min_/RAM8.min.spef \
 	$::env(DESIGN_DIR)/../macros/spef/nom_/RAM8.nom.spef"
+set ::env(FP_PDN_VOFFSET) 26.32
+set ::env(FP_PDN_CFG) "$::env(DESIGN_DIR)/../pdn_cfg.tcl"
 
 # PL_TARGET_DENSITY - You can increase this if Global Placement fails with error GPL-0302.
 # Users have reported that values up to 0.8 worked well for them.
