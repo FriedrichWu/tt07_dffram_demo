@@ -20,8 +20,9 @@ set ::env(EXTRA_GDS_FILES) "\
 	$::env(DESIGN_DIR)/../macros/gds/RAM8.gds"
 
 set ::env(EXTRA_SPEFS) "\
-    $::env(DESIGN_DIR)/../macros/spef/max_/RAM8.max.spef\
-	$::env(DESIGN_DIR)/../macros/spef/min_/RAM8.min.spef\
+	RAM8 \
+    $::env(DESIGN_DIR)/../macros/spef/max_/RAM8.max.spef \
+	$::env(DESIGN_DIR)/../macros/spef/min_/RAM8.min.spef \
 	$::env(DESIGN_DIR)/../macros/spef/nom_/RAM8.nom.spef"
 
 # PL_TARGET_DENSITY - You can increase this if Global Placement fails with error GPL-0302.
