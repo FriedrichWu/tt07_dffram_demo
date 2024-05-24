@@ -24,14 +24,29 @@ reg [31:0] real_data_out;
 reg [31:0] use_data_out;
 reg out_en;
 
-
 assign uio_oe = 8'b0; // all input
+assign uio_out = 8'b0;
 //====================================//
 //adust the signal, be aware that only by write is bytewise inside the ram
 //input 
 //the user must be ware, which position is being send!
-assign real_data_in = (uio_in[3:0] != 1'b0) ? {25'd0, ui_in[7:0]} : 32'd0;
-
+always @(*) begin
+  case (uio_in[3:0])
+	4'b0001: begin 
+      real_data_in = {25'd0, ui_in[7:0]};
+	end
+	4'b0010: begin 
+	  real_data_in = {25'd0, ui_in[7:0]} << 4'd8;	
+	end
+	4'b0100: begin 
+	  real_data_in = {25'd0, ui_in[7:0]} << 5'd16;	
+	end
+	4'b1000: begin 
+	  real_data_in = {25'd0, ui_in[7:0]} << 6'd24;
+	end		
+	default: real_data_in = 32'd0;
+  endcase
+end
 //output control
 //make sure timing is correct
 always @(posedge clk, negedge rst_n) begin
@@ -75,5 +90,5 @@ dffram_8x32 ram_ins (
   .A0    (uio_in[7:5]  ),//address
   .Di0   (real_data_in ),
   .Do0   (real_data_out)
-)
+);
 endmodule
