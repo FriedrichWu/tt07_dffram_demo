@@ -4,7 +4,7 @@
 
 `default_nettype none
 
-module dffram_8x32 (
+module RAM8 (
 `ifdef USE_POWER_PINS
   input VPWR,
   input VGND,
@@ -16,7 +16,7 @@ module dffram_8x32 (
   input [31:0] Di0,
   output reg [31:0] Do0
 );
-/*
+
 reg [31:0] RAM[7:0];
 
 always @(posedge CLK)
@@ -29,5 +29,5 @@ always @(posedge CLK)
   end else begin
     Do0 <= 32'b0;
   end
-*/
+
 endmodule

@@ -9,6 +9,20 @@
 # If you get stuck with this config, please open an issue or get in touch via the discord.
 
 # Here are some of the variables you may want to change:
+### Black-box verilog and views
+set ::env(VERILOG_FILES_BLACKBOX) "\
+	$::env(DESIGN_DIR)/RAM8.v"
+
+set ::env(EXTRA_LEFS) "\
+	$::env(DESIGN_DIR)/../macros/lef/RAM8.lef"
+
+set ::env(EXTRA_GDS_FILES) "\
+	$::env(DESIGN_DIR)/../macros/gds/RAM8.gds"
+
+set ::env(EXTRA_SPEFS) "\
+    $::env(DESIGN_DIR)/../macros/spef/max_/RAM8.max.spef\
+	$::env(DESIGN_DIR)/../macros/spef/min_/RAM8.min.spef\
+	$::env(DESIGN_DIR)/../macros/spef/nom_/RAM8.nom.spef"
 
 # PL_TARGET_DENSITY - You can increase this if Global Placement fails with error GPL-0302.
 # Users have reported that values up to 0.8 worked well for them.

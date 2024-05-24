@@ -79,7 +79,7 @@ assign uo_out = use_data_out[7:0];
 //====================================//
 //==============Instance==============//
 //====================================//
-dffram_8x32 ram_ins (
+RAM8 ram_ins (
 `ifdef USE_POWER_PINS
   .VPWR (VPWR),
   .VGND (VGND),
