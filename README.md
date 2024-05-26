@@ -10,7 +10,7 @@ Tiny Tapeout is an educational project that aims to make it easier and cheaper t
 
 To learn more and get started, visit https://tinytapeout.com.
 ## Introduction
-This is a simple demo to test use memory macro(dffram) in the tinytape out, in the wrapper of this demo, shift register is added, in order to make the timing of dffram like sram, and avoid possible problems of latchs.  
+This is a simple demo to test use memory macro(dffram) in the Tiny Tapeout, in the wrapper of this demo, shift register is added, in order to make the timing of dffram like sram, and avoid possible problems of latchs.  
 
 You could completely regard this as a 8x32 sram (in the meaning of timing) 
 ## Usage
