@@ -17,7 +17,7 @@ You could completely regard this as a 8x32 sram (in the meaning of timing)
 For some certain reason, if write operation immediately follows after read operation, the write data may become "xxxxxxxx". Therefore, wait for 1 clock cycle before doing read operation is recommanded.
 
 ## Links
-If you're looking for ram macros, dffram maybe a good example. https://github.com/AUCOHL/DFFRAM
+If you're looking for ram macros, dffram maybe a good example. https://github.com/AUCOHL/DFFRAM    
 Special thanks to @urish and his example for using macro. https://github.com/TinyTapeout/tt06-dffram-example
 
 ## Enable GitHub actions to build the results page
