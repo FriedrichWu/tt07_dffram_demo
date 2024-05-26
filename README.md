@@ -9,15 +9,16 @@
 Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital and analog designs manufactured on a real chip.
 
 To learn more and get started, visit https://tinytapeout.com.
+## Introduction
+This is a simple demo to test use memory macro(dffram) in the tinytape out, in the wrapper of this demo, shift regester is added, in order to make the timing of dffram like sram, and avoid possible problems of latchs.  
 
-## Set up your Verilog project
+You could completely regard this as a 8x32 sram (in the meaning of timing) 
+## Usage
+For some certain reason, if write operation immediately follows after read operation, the write data may become "xxxxxxxx". Therefore, wait for 1 clock cycle before doing read operation is recommanded.
 
-1. Add your Verilog files to the `src` folder.
-2. Edit the [info.yaml](info.yaml) and update information about your project, paying special attention to the `source_files` and `top_module` properties. If you are upgrading an existing Tiny Tapeout project, check out our [online info.yaml migration tool](https://tinytapeout.github.io/tt-yaml-upgrade-tool/).
-3. Edit [docs/info.md](docs/info.md) and add a description of your project.
-4. Adapt the testbench to your design. See [test/README.md](test/README.md) for more information.
-
-The GitHub action will automatically build the ASIC files using [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/).
+## Links
+If you're looking for ram macros, dffram maybe a good example. https://github.com/AUCOHL/DFFRAM
+Special thanks to @urish and his example for using macro. https://github.com/TinyTapeout/tt06-dffram-example
 
 ## Enable GitHub actions to build the results page
 
