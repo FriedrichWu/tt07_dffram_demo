@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Tiny Tapeout Precheck
-        uses: TinyTapeout/tt-gds-action/precheck@tt07
+        uses: TinyTapeout/tt-gds-action/precheck@tt06
 
   gl_test:
     needs: gds
