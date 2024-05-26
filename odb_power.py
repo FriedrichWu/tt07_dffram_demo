@@ -14,7 +14,7 @@ import click
 from reader import click_odb
 
 @click.option(
-    "--macro-x-pos", default=0, type=int, help="X position of the RAM32 macro"
+    "--macro-x-pos", default=0, type=int, help="X position of the RAM8 macro"
 )
 @click.command()
 @click_odb
